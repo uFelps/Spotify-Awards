@@ -27,5 +27,12 @@ public class ArtistService {
 		return artistsDTO;
 
 	}
+	
+	@Transactional(readOnly = true)
+	public ArtistDTO findById(Long id) {
+		Artist artist = repository.findById(id).get();
+		
+		return new ArtistDTO(artist);
+	}
 
 }
