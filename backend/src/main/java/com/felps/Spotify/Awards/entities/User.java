@@ -25,9 +25,12 @@ public class User implements Serializable {
 
 	@OneToMany(mappedBy = "id.user")
 	private Set<ScoreArtist> scoresArtist = new HashSet<>();
-	
+
 	@OneToMany(mappedBy = "id.user")
 	private Set<ScoreAlbum> scoresAlbum = new HashSet<>();
+
+	@OneToMany(mappedBy = "id.user")
+	private Set<ScoreSong> scoresSong = new HashSet<>();
 
 	public User() {
 
@@ -62,6 +65,10 @@ public class User implements Serializable {
 		return scoresAlbum;
 	}
 
+	public Set<ScoreSong> getScoresSong() {
+		return scoresSong;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -78,5 +85,5 @@ public class User implements Serializable {
 		User other = (User) obj;
 		return Objects.equals(id, other.id);
 	}
-	
+
 }

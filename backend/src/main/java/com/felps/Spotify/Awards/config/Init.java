@@ -12,12 +12,14 @@ import com.felps.Spotify.Awards.entities.Album;
 import com.felps.Spotify.Awards.entities.Artist;
 import com.felps.Spotify.Awards.entities.ScoreAlbum;
 import com.felps.Spotify.Awards.entities.ScoreArtist;
+import com.felps.Spotify.Awards.entities.ScoreSong;
 import com.felps.Spotify.Awards.entities.Song;
 import com.felps.Spotify.Awards.entities.User;
 import com.felps.Spotify.Awards.repositories.AlbumRespository;
 import com.felps.Spotify.Awards.repositories.ArtistRepository;
 import com.felps.Spotify.Awards.repositories.ScoreAlbumRepository;
 import com.felps.Spotify.Awards.repositories.ScoreArtistRepository;
+import com.felps.Spotify.Awards.repositories.ScoreSongRepository;
 import com.felps.Spotify.Awards.repositories.SongRepository;
 import com.felps.Spotify.Awards.repositories.UserRepository;
 
@@ -42,6 +44,9 @@ public class Init implements CommandLineRunner{
 	
 	@Autowired
 	private ScoreAlbumRepository scoreAlbumRepository;
+	
+	@Autowired
+	private ScoreSongRepository scoreSongRepository;
 	
 	@Override
 	public void run(String... args) throws Exception {
@@ -81,6 +86,14 @@ public class Init implements CommandLineRunner{
 		ScoreAlbum sd1 = new ScoreAlbum(maria, unlimitedLove, 5.0);
 		ScoreAlbum sd2 = new ScoreAlbum(alex, unlimitedLove, 5.0);
 		scoreAlbumRepository.saveAll(Arrays.asList(sd1, sd2));
+		
+		ScoreSong sg1 = new ScoreSong(maria, blackSummer, 5.0);
+		ScoreSong sg2 = new ScoreSong(maria, whatchuthinkin, 5.0);
+		ScoreSong sg3 = new ScoreSong(alex, blackSummer, 5.0);
+		ScoreSong sg4 = new ScoreSong(alex, whatchuthinkin, 5.0);
+		scoreSongRepository.saveAll(Arrays.asList(sg1,sg2,sg3,sg4));
+		
+		
 		
 		
 		
