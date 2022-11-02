@@ -24,7 +24,10 @@ public class User implements Serializable {
 	private String email;
 
 	@OneToMany(mappedBy = "id.user")
-	private Set<ScoreArtist> scores = new HashSet<>();
+	private Set<ScoreArtist> scoresArtist = new HashSet<>();
+	
+	@OneToMany(mappedBy = "id.user")
+	private Set<ScoreAlbum> scoresAlbum = new HashSet<>();
 
 	public User() {
 
@@ -51,8 +54,12 @@ public class User implements Serializable {
 		this.email = email;
 	}
 
-	public Set<ScoreArtist> getScores() {
-		return scores;
+	public Set<ScoreArtist> getScoresArtist() {
+		return scoresArtist;
+	}
+
+	public Set<ScoreAlbum> getScoresAlbum() {
+		return scoresAlbum;
 	}
 
 	@Override

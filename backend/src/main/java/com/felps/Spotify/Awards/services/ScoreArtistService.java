@@ -42,14 +42,14 @@ public class ScoreArtistService {
 
 		double sum = 0.0;
 
-		for (ScoreArtist s : artist.getScores()) {
+		for (ScoreArtist s : artist.getScoresArtist()) {
 			sum += s.getScoreValue();
 		}
 
-		double avg = sum / artist.getScores().size();
+		double avg = sum / artist.getScoresArtist().size();
 
 		artist.setAverage(avg);
-		artist.setCountVotes(artist.getScores().size());
+		artist.setCountVotes(artist.getScoresArtist().size());
 
 		artist = artistRepository.saveAndFlush(artist);
 

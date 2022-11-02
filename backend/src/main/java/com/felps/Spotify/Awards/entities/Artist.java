@@ -28,7 +28,7 @@ public class Artist implements Serializable {
 	private Integer countVotes;
 
 	@OneToMany(mappedBy = "id.artist")
-	private Set<ScoreArtist> scores = new HashSet<>();
+	private Set<ScoreArtist> scoresArtist = new HashSet<>();
 
 	public Artist() {
 
@@ -91,8 +91,8 @@ public class Artist implements Serializable {
 		this.countVotes = countVotes;
 	}
 
-	public Set<ScoreArtist> getScores() {
-		return scores;
+	public Set<ScoreArtist> getScoresArtist() {
+		return scoresArtist;
 	}
 
 	@Override

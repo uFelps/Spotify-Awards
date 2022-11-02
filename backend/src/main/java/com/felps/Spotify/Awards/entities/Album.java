@@ -34,6 +34,9 @@ public class Album implements Serializable {
 	@OneToMany(mappedBy = "album")
 	private Set<Song> songs = new HashSet<>();
 
+	@OneToMany(mappedBy = "id.album")
+	private Set<ScoreAlbum> scoresAlbum = new HashSet<>();
+
 	public Album() {
 
 	}
@@ -125,6 +128,10 @@ public class Album implements Serializable {
 
 	public Set<Song> getSongs() {
 		return songs;
+	}
+
+	public Set<ScoreAlbum> getScoresAlbum() {
+		return scoresAlbum;
 	}
 
 	@Override
