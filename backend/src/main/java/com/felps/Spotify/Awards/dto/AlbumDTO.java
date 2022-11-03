@@ -5,7 +5,7 @@ import java.time.Instant;
 import com.felps.Spotify.Awards.entities.Album;
 
 public class AlbumDTO {
-	
+
 	private Long id;
 	private String name;
 	private String artist;
@@ -15,9 +15,9 @@ public class AlbumDTO {
 	private String img;
 	private Double average;
 	private Integer countVotes;
-	
+
 	public AlbumDTO() {
-		
+
 	}
 
 	public AlbumDTO(Long id, String name, String artist, String duration, Instant released, String url, String img,
@@ -32,7 +32,7 @@ public class AlbumDTO {
 		this.average = average;
 		this.countVotes = countVotes;
 	}
-	
+
 	public AlbumDTO(Album album) {
 		id = album.getId();
 		name = album.getName();
@@ -116,9 +116,5 @@ public class AlbumDTO {
 	public void setCountVotes(Integer countVotes) {
 		this.countVotes = countVotes;
 	}
-	
-	
-	
-	
 
 }

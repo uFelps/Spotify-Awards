@@ -37,6 +37,7 @@ public class ScoreAlbum implements Serializable{
 		id.setUser(user);
 	}
 	
+	
 	public Album getAlbum() {
 		return id.getAlbum();
 	}

@@ -1,27 +1,9 @@
-package com.felps.Spotify.Awards.entities;
+package com.felps.Spotify.Awards.dto;
 
-import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import com.felps.Spotify.Awards.entities.Song;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+public class SongDTO {
 
-@Entity
-@Table(name = "tb_song")
-public class Song implements Serializable{
-	
-	private static final long serialVersionUID = 1L;
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String title;
 	private String artist;
@@ -33,20 +15,9 @@ public class Song implements Serializable{
 	private String img;
 	private Double average;
 	private Integer countVotes;
-	
-	@ManyToOne
-	@JoinColumn(name = "album_id")
-	private Album album;
-	
-	@OneToMany(mappedBy = "id.song")
-	private Set<ScoreSong> scores = new HashSet<>();
-	
-	public Song() {
-		
-	}
 
-	public Song(Long id, String title, String artist, String duration, String category, Boolean indicatedBestSong,
-			Boolean indicatedBestCategory, String url, String img, Double average, Integer countVotes, Album album) {
+	public SongDTO(Long id, String title, String artist, String duration, String category, Boolean indicatedBestSong,
+			Boolean indicatedBestCategory, String url, String img, Double average, Integer countVotes) {
 		this.id = id;
 		this.title = title;
 		this.artist = artist;
@@ -58,7 +29,20 @@ public class Song implements Serializable{
 		this.img = img;
 		this.average = average;
 		this.countVotes = countVotes;
-		this.album = album;
+	}
+
+	public SongDTO(Song song) {
+		this.id = song.getId();
+		this.title = song.getTitle();
+		this.artist = song.getArtist();
+		this.duration = song.getDuration();
+		this.category = song.getCategory();
+		this.indicatedBestSong = song.getIndicatedBestSong();
+		this.indicatedBestCategory = song.getIndicatedBestCategory();
+		this.url = song.getUrl();
+		this.img = song.getImg();
+		this.average = song.getAverage();
+		this.countVotes = song.getCountVotes();
 	}
 
 	public Long getId() {
@@ -85,7 +69,6 @@ public class Song implements Serializable{
 		this.artist = artist;
 	}
 
-	
 	public String getDuration() {
 		return duration;
 	}
@@ -149,40 +132,5 @@ public class Song implements Serializable{
 	public void setCountVotes(Integer countVotes) {
 		this.countVotes = countVotes;
 	}
-	
-	public Album getAlbum() {
-		return album;
-	}
-
-	public void setAlbum(Album album) {
-		this.album = album;
-	}
-	
-	
-
-
-	public Set<ScoreSong> getScores() {
-		return scores;
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Song other = (Song) obj;
-		return Objects.equals(id, other.id);
-	}
-	
-	
-	
 
 }

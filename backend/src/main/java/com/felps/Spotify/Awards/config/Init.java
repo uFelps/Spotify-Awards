@@ -94,6 +94,11 @@ public class Init implements CommandLineRunner{
 		scoreSongRepository.saveAll(Arrays.asList(sg1,sg2,sg3,sg4));
 		
 		
+		Song ilikeyou = new Song(null, "I Like You", "Post Malone", "3:52", "Pop", true, true, null, null, 5.0, 2, null);
+		songRepository.save(ilikeyou);
+		
+		Song n95 = new Song(null, "N95", "Kendrick Lamar", "3:52", "Hip-Hop", true, true, null, null, 5.0, 2, null);
+		songRepository.save(n95);
 		
 		
 		

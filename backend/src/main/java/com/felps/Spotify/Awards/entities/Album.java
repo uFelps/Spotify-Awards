@@ -6,6 +6,8 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -126,10 +128,12 @@ public class Album implements Serializable {
 		this.countVotes = countVotes;
 	}
 
+	@JsonIgnore
 	public Set<Song> getSongs() {
 		return songs;
 	}
 
+	@JsonIgnore
 	public Set<ScoreAlbum> getScoresAlbum() {
 		return scoresAlbum;
 	}
