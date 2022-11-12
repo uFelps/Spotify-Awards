@@ -1,8 +1,8 @@
 import { ReactComponent as SpotifyLogo } from "assets/img/logo_spotify.svg";
 import "./style.css";
-import { BrowserRouter, Link } from "react-router-dom";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { useState } from "react";
+
 
 function Navbar() {
 
@@ -11,29 +11,25 @@ function Navbar() {
   const handleClick = () => setClick(!click);
 
   return (
-    <BrowserRouter>
     <header>
       <div className="content">
         <div className="logo">
 
-          <Link to={"/"}><SpotifyLogo></SpotifyLogo></Link>
+          <a href="/"><SpotifyLogo></SpotifyLogo></a>
         </div>
 
         <nav id="navbar" className={click ? "navbar-active" : "dis"}>
-          
-            <Link className="links" onClick={handleClick} to={"/artists"}>Artists</Link>
-            <Link className="links" onClick={handleClick} to={"/albuns"}>Albuns</Link>
-            <Link className="links" onClick={handleClick} to={"/songs-of-the-year"}>Songs</Link>
-            <Link className="links" onClick={handleClick} to={"/bestpop"}>Pop</Link>
-            <Link className="links" onClick={handleClick} to={"/best-hip-hop"}>Hip-Hop</Link>
-            <Link className="links" onClick={handleClick} to={"/best-rock"}>Rock</Link>
-
+            <a href={'/artists'} className="links" onClick={handleClick}>Artists</a>
+            <a href={'/albuns'} className="links" onClick={handleClick}>Albuns</a>
+            <a href={'/artists'} className="links" onClick={handleClick}>Songs</a>
+            <a href={'/artists'} className="links" onClick={handleClick}>Pop</a>
+            <a href={'/artists'} className="links" onClick={handleClick}>Hip-Hop</a>
+            <a href={'/artists'} className="links" onClick={handleClick}>Rock</a>
         </nav>
 
         <i className={click ? "bi bi-x-circle" : "bi bi-list"} onClick={handleClick}></i>
       </div>
     </header>
-    </BrowserRouter>
   );
 }
 
