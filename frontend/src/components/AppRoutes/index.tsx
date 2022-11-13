@@ -9,6 +9,11 @@ function AppRoutes(){
             <Routes>
                 <Route path="/" element={<Main></Main>}></Route>
                 <Route path="/artists" element={<Artists></Artists>}></Route>
+                <Route path="/albuns" element={<Artists></Artists>}></Route>
+                <Route path="/song-of-the-year" element={<Artists></Artists>}></Route>
+                <Route path="/best-pop" element={<Artists></Artists>}></Route>
+                <Route path="/best-rock" element={<Artists></Artists>}></Route>
+                <Route path="/best-hip-hop" element={<Artists></Artists>}></Route>
             </Routes>
         </BrowserRouter>
     );
