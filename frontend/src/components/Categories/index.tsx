@@ -10,6 +10,7 @@ import "./style.css";
 function Categories() {
   return (
     <>
+    <div className="caixa">
       <div>
         <div className="header">
           <h1 className="title">Categories</h1>
@@ -38,6 +39,7 @@ function Categories() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );
