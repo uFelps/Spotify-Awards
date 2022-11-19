@@ -1,0 +1,17 @@
+.score-itens p{
+    margin: 0;
+    font-size: 14px;
+}
+
+.stars{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.stars p{
+    margin: 0px 10px 0px 0px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFBB3A;
+}

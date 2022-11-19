@@ -1,0 +1,43 @@
+.grupo{
+
+    height: 350px;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    color: white;
+    
+}
+
+.grupo img{
+    width: 167px;
+    margin-top: 80px;
+}
+
+.grupo p{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.grupo h1{
+    font-size: 60px;
+    font-weight: 700;
+}
+
+@media (max-width: 800px){
+    
+    .grupo{
+        height: 280px;
+    }
+    
+    .grupo h1{
+        font-size: 30px;
+    }
+
+    .grupo img{
+        width: 100px;
+        
+    }
+
+    .grupo p{
+        font-size: 16px;
+    }
+}
