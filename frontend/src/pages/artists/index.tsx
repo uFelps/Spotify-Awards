@@ -1,69 +1,30 @@
+import axios from "axios";
 import CardArtist from "components/CardArtist";
 import SpotifyPresents from "components/Spotify Presents";
+import { useEffect, useState } from "react";
+import { Artist, ArtistPage } from "types/artist";
+import { BASE_URL } from "util/requests";
 import "./style.css";
 
 function Artists() {
-  const artists = [
-    {
-      id: 1,
-      name: "Red Hot Chili Peppers",
-      image:
-        "https://github.com/uFelps/assets/blob/main/Spotify-Awards/artists/RedHotChiliPeppers.jpg?raw=true",
-      listeners: "26.298.433",
-      average: 4.5,
-      countVotes: 2,
-    },
+  const [artists, setArtists] = useState<ArtistPage>({
+    content: [],
+    last: true,
+    totalPages: 0,
+    totalElements: 0,
+    size: 12,
+    number: 0,
+    first: true,
+    numberOfElements: 0,
+    empty: true,
+  });
 
-    {
-      id: 2,
-      name: "Kendrick Lamar",
-      image:
-        "https://github.com/uFelps/assets/blob/main/Spotify-Awards/artists/kendrick-lamar.jpg.png?raw=true",
-      listeners: "37.552.617",
-      average: 5.0,
-      countVotes: 2,
-    },
-
-    {
-      id: 3,
-      name: "Post Malone",
-      image:
-        "https://github.com/uFelps/assets/blob/main/Spotify-Awards/artists/post-malone.jpg.png?raw=true",
-      listeners: "50.365.046",
-      average: 5.0,
-      countVotes: 2,
-    },
-
-    {
-      id: 1,
-      name: "Red Hot Chili Peppers",
-      image:
-        "https://github.com/uFelps/assets/blob/main/Spotify-Awards/artists/RedHotChiliPeppers.jpg?raw=true",
-      listeners: "26.298.433",
-      average: 4.5,
-      countVotes: 2,
-    },
-
-    {
-      id: 2,
-      name: "Kendrick Lamar",
-      image:
-        "https://github.com/uFelps/assets/blob/main/Spotify-Awards/artists/kendrick-lamar.jpg.png?raw=true",
-      listeners: "37.552.617",
-      average: 5.0,
-      countVotes: 2,
-    },
-
-    {
-      id: 3,
-      name: "Post Malone",
-      image:
-        "https://github.com/uFelps/assets/blob/main/Spotify-Awards/artists/post-malone.jpg.png?raw=true",
-      listeners: "50.365.046",
-      average: 5.0,
-      countVotes: 2,
-    },
-  ];
+  useEffect(() => {
+    axios.get(`${BASE_URL}/artists`).then((response) => {
+      const data = response.data as ArtistPage;
+      setArtists(data);
+    });
+  });
 
   return (
     <>
@@ -78,7 +39,7 @@ function Artists() {
 
         <div className="container">
           <div className="row">
-            {artists.map((artist) => (
+            {artists.content.map((artist) => (
               <div className="col-12 col-sm-12 col-md-6 col-lg-4" id="card">
                 <CardArtist artist={artist}></CardArtist>
               </div>

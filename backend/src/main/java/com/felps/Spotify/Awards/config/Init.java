@@ -60,17 +60,22 @@ public class Init implements CommandLineRunner{
 		userRepository.saveAll(Arrays.asList(maria, alex, joao, ana, lucas, joaquim));
 		
 		
-		Artist rhcp = new Artist(null, "Red Hot Chili Peppers", null, "26.298.433", 4.5, 2);
-		Artist kendrick = new Artist(null, "Kendrick Lamar",null, "37.552.617", 5.0, 3);
-		artistRepository.saveAll(Arrays.asList(rhcp, kendrick));
+		Artist harry = new Artist(null, "Harry Styles", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/artists/harry.jpeg.png?raw=true" , "63.961.408", 0.0, 0);
+		Artist kendrick = new Artist(null, "Kendrick Lamar", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/artists/kendrick-lamar.jpg.png?raw=true", "37.552.617", 0.0, 0);
+		Artist post = new Artist(null, "Post Malone", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/artists/post-malone.jpg.png?raw=true", "50.243.221", 0.0, 0);
+		Artist doja = new Artist(null, "Doja Cat", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/artists/doja-cat.jpeg.png?raw=true" , "50.332.358", 0.0, 0);
+		Artist billie = new Artist(null, "Billie Eilish", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/artists/billie.jpg.png?raw=true" , "50.361.697", 0.0, 0);
+		Artist lil = new Artist(null, "Lil Nas X", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/artists/lil-nas-x-.jpg.png?raw=true" , "39.879.683", 0.0, 0);
+		
+		artistRepository.saveAll(Arrays.asList(harry, kendrick, post, doja, billie, lil));
 		
 		
-		ScoreArtist sa1 = new ScoreArtist(rhcp, maria, 4.0);		
+		/*ScoreArtist sa1 = new ScoreArtist(rhcp, maria, 4.0);		
 		ScoreArtist sa2 = new ScoreArtist(rhcp, alex, 5.0);
 		ScoreArtist sa3 = new ScoreArtist(kendrick, joao, 5.0);
 		ScoreArtist sa4 = new ScoreArtist(kendrick, ana, 5.0);
 		ScoreArtist sa5 = new ScoreArtist(kendrick, lucas, 5.0);
-		scoreArtistRepository.saveAll(Arrays.asList(sa1, sa2, sa3, sa4, sa5));
+		scoreArtistRepository.saveAll(Arrays.asList(sa1, sa2, sa3, sa4, sa5));*/
 		
 		
 		

@@ -15,7 +15,7 @@ function CardArtist({ artist }: Props) {
         <div className="conteudo">
           <h1>{artist.name}</h1>
           <ScoreStars average={artist.average} countVotes={artist.countVotes}></ScoreStars>
-          <ButtonEvaluate url="/score-artist"></ButtonEvaluate>
+          <ButtonEvaluate url={"/artist-review/"+artist.id}></ButtonEvaluate>
         </div>
       </div>
     </>
