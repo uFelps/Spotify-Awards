@@ -4,14 +4,14 @@ type Props = {
     url: string;
 }
 
-function ButtonEvaluate({url} : Props) {
+function ButtonVote({url} : Props) {
   return (
     <>
       <a href={url}>
-        <button className="bt">Evaluate</button>
+        <button className="bt">Vote</button>
       </a>
     </>
   );
 }
 
-export default ButtonEvaluate;
+export default ButtonVote;

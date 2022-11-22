@@ -2,7 +2,7 @@ import axios from "axios";
 import CardArtist from "components/CardArtist";
 import SpotifyPresents from "components/Spotify Presents";
 import { useEffect, useState } from "react";
-import { Artist, ArtistPage } from "types/artist";
+import { ArtistPage } from "types/artist";
 import { BASE_URL } from "util/requests";
 import "./style.css";
 
@@ -24,7 +24,7 @@ function Artists() {
       const data = response.data as ArtistPage;
       setArtists(data);
     });
-  });
+  }, []);
 
   return (
     <>

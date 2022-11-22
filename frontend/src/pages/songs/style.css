@@ -1,0 +1,19 @@
+.songs{
+    background-color: #D9D9D9;
+    padding: 60px 0px 60px 0px;
+    flex-wrap: wrap;
+}
+
+.title{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+#card{
+    display: flex;
+    justify-content: center;
+}

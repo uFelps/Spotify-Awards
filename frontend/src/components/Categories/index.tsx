@@ -26,10 +26,10 @@ function Categories() {
             <a href="/albuns"><CategoriesCard img={Img2}></CategoriesCard></a>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-4 cards">
-              <a href="/songs"><CategoriesCard img={Img3}></CategoriesCard></a>
+              <a href="/songs-of-the-year"><CategoriesCard img={Img3}></CategoriesCard></a>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-4 cards">
-              <a href="/song-of-the-year"><CategoriesCard img={Img4}></CategoriesCard></a>
+              <a href="/best-pop"><CategoriesCard img={Img4}></CategoriesCard></a>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-4 cards">
             <a href="/best-rock"><CategoriesCard img={Img5}></CategoriesCard></a>

@@ -3,13 +3,12 @@ a {
 }
 
 .bt{
-    margin: 15px 0px 0px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     background-color: #00A140;
-    width: 146px;
+    width: 120px;
     height: 36px;
     border-radius: 10px;
     font-size: 18px;
