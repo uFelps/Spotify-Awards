@@ -6,7 +6,13 @@ import { SongPage } from "types/song";
 import { BASE_URL } from "util/requests";
 import "./style.css";
 
-function Songs() {
+type Props = {
+  title: string;
+  url: string;
+  color: string;
+}
+
+function Songs({title, url, color} : Props) {
   
   const [songs, setSongs] = useState<SongPage>({
     content: [],
@@ -21,11 +27,12 @@ function Songs() {
   });  
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/song-of-the-year`)
+    axios.get(`${BASE_URL}${url}`)
     .then((response) => {
         const data = response.data as SongPage;
         setSongs(data);
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
 
@@ -34,8 +41,8 @@ function Songs() {
   return (
     <>
       <SpotifyPresents
-        title="Songs Of The Year"
-        color="linear-gradient(to right, #0C3C3A, #20AE37)"
+        title={title}
+        color={color}
       ></SpotifyPresents>
       <div className="songs">
         <div className="title">

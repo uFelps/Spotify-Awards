@@ -30,7 +30,13 @@ h2{
         display: none;
     }
 
+    .header{
+        margin-bottom: 0px;
+    }
+
     .header h1{
         text-align: center;
     }
+
+    
 }

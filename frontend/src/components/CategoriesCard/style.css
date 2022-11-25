@@ -8,3 +8,9 @@
   top: -3px;
   box-shadow: 0 5px 5px #00A140;
 }
+
+@media (max-width: 800px) {
+  .card{
+    width: 300px;
+  }
+}
