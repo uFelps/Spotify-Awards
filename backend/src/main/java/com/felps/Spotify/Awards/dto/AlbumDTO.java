@@ -1,6 +1,8 @@
 package com.felps.Spotify.Awards.dto;
 
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.felps.Spotify.Awards.entities.Album;
 
@@ -15,6 +17,7 @@ public class AlbumDTO {
 	private String img;
 	private Double average;
 	private Integer countVotes;
+	private List<String> songs = new ArrayList<>();
 
 	public AlbumDTO() {
 
@@ -43,6 +46,7 @@ public class AlbumDTO {
 		img = album.getImg();
 		average = album.getAverage();
 		countVotes = album.getCountVotes();
+		songs = album.getSongs();
 	}
 
 	public Long getId() {
@@ -116,5 +120,11 @@ public class AlbumDTO {
 	public void setCountVotes(Integer countVotes) {
 		this.countVotes = countVotes;
 	}
+
+	public List<String> getSongs() {
+		return songs;
+	}
+	
+	
 
 }

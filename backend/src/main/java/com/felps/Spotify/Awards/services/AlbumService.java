@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.felps.Spotify.Awards.dto.AlbumDTO;
+import com.felps.Spotify.Awards.dto.AlbumSimpleDTO;
 import com.felps.Spotify.Awards.entities.Album;
 import com.felps.Spotify.Awards.repositories.AlbumRespository;
 
@@ -17,12 +18,12 @@ public class AlbumService {
 	private AlbumRespository repository;
 	
 	@Transactional(readOnly = true)
-	public Page<AlbumDTO> findAll(Pageable pageable){
+	public Page<AlbumSimpleDTO> findAll(Pageable pageable){
 		Page<Album> albuns = repository.findAll(pageable);
 		
-		Page<AlbumDTO> albunsDTO = albuns.map(x -> new AlbumDTO(x));
+		Page<AlbumSimpleDTO> albunsSimpleDTO = albuns.map(x -> new AlbumSimpleDTO(x));
 		
-		return albunsDTO;
+		return albunsSimpleDTO;
 	}
 	
 	@Transactional

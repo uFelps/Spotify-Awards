@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.felps.Spotify.Awards.dto.AlbumDTO;
+import com.felps.Spotify.Awards.dto.AlbumSimpleDTO;
 import com.felps.Spotify.Awards.services.AlbumService;
 
 @RestController
@@ -19,7 +20,7 @@ public class AlbumResource {
 	private AlbumService service;
 	
 	@GetMapping
-	public Page<AlbumDTO> findAll(Pageable pageable){
+	public Page<AlbumSimpleDTO> findAll(Pageable pageable){
 		return service.findAll(pageable);
 	}
 	

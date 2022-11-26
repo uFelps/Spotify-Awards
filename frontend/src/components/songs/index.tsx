@@ -51,7 +51,7 @@ function Songs({title, url, color} : Props) {
         <div className="container">
           <div className="row">
             {songs.content.map((song) => (
-                <div className="col-12 col-sm-12 col-md-6 col-lg-4" id="card">
+                <div key={song.id} className="col-12 col-sm-12 col-md-6 col-lg-4" id="card">
                 <CardSong song={song}></CardSong>
               </div>
             ))}

@@ -1,0 +1,29 @@
+
+
+.album-card{
+    height: 300px;
+    width: 300px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    margin: 30px 0px 0px 0px;
+}
+
+.album-card-titles{
+    margin: 180px 0px 0px 20px;
+}
+
+.album-card-titles h1{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.album-card-titles p{
+    font-size: 15px;
+}
+
+.album-card:hover{
+    top: -3px;
+    box-shadow: 0 5px 5px #00A140;
+    color: white;
+}

@@ -40,7 +40,7 @@ function Artists() {
         <div className="container">
           <div className="row">
             {artists.content.map((artist) => (
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4" id="card">
+              <div key={artist.id} className="col-12 col-sm-12 col-md-6 col-lg-4" id="card">
                 <CardArtist artist={artist}></CardArtist>
               </div>
             ))}

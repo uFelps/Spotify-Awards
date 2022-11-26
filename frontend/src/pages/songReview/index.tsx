@@ -20,7 +20,8 @@ function SongReview({ route }: Props) {
     axios.get(`${BASE_URL}/${route}/${params.songId}`).then((response) => {
       setSong(response.data);
     });
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

@@ -18,7 +18,8 @@ function ArtistReview() {
     axios.get(`${BASE_URL}/artists/${params.artistId}`).then((response) => {
       setArtist(response.data);
     });
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

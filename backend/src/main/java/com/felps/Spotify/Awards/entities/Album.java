@@ -2,7 +2,9 @@ package com.felps.Spotify.Awards.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -32,9 +34,7 @@ public class Album implements Serializable {
 	private String img;
 	private Double average;
 	private Integer countVotes;
-
-	@OneToMany(mappedBy = "album")
-	private Set<Song> songs = new HashSet<>();
+	private List<String> songs = new ArrayList<>();
 
 	@OneToMany(mappedBy = "id.album")
 	private Set<ScoreAlbum> scoresAlbum = new HashSet<>();
@@ -128,8 +128,7 @@ public class Album implements Serializable {
 		this.countVotes = countVotes;
 	}
 
-	@JsonIgnore
-	public Set<Song> getSongs() {
+	public List<String> getSongs() {
 		return songs;
 	}
 
