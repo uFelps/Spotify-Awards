@@ -1,0 +1,10 @@
+.album-songs{
+    background-color: black;
+    padding: 10px 0px 10px 0px;
+}
+
+.album-date{
+    margin: 40px 0px 0px 16%;
+    color: #BBBBBB;
+    font-size: 16px;
+}

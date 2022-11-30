@@ -3,18 +3,14 @@ import "./style.css";
 
 type Props = {
   average: number;
-  countVotes: number;
 };
 
-function ScoreStars({ average, countVotes }: Props) {
+function ScoreStars({ average }: Props) {
   return (
     <>
-      <div className="score-itens">
-        <div className="stars">
-          <p>{average > 0 ? average.toFixed(1) : "-"}</p>
-          <Stars average={average}></Stars>
-        </div>
-        <p>{countVotes + " reviews"}</p>
+      <div className="stars">
+        <p className="score-stars-p">{average > 0 ? average.toFixed(1) : "-"}</p>
+        <Stars average={average}></Stars>
       </div>
     </>
   );

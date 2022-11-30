@@ -8,7 +8,7 @@ type Props = {
 function ButtonListen({ url }: Props) {
   return (
     <>
-      <a href={url}>
+      <a href={url} className="link">
         <button className="botao-listen">
           <img src={Img} alt="logo" id="img-spotify-listen"></img>
           Listen

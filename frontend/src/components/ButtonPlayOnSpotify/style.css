@@ -1,0 +1,40 @@
+
+
+
+.buttonPlayOnSpotify{
+    background-color: #00A140;
+    border-radius: 10px;
+    width: 263px;
+    height: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0px 0px 0px;
+    
+}
+
+.buttonPlayOnSpotify img{
+    width: 43px;
+    margin: 0px 10px 0px 0px;
+}
+
+.buttonPlayOnSpotify p{
+    color: white;
+    margin: 0px 0px 0px 10px;
+}
+
+.buttonPlayOnSpotify:hover{
+    background-color: #003a17;
+    color: #00A140;
+}
+
+@media (max-width: 800px){
+    .buttonPlayOnSpotify{
+        width: 200px;
+    }
+
+    .buttonPlayOnSpotify img{
+        width: 33px;
+        margin: 0px 5px 0px 0px;
+    }
+}

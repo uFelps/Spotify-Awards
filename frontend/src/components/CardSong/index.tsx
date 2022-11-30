@@ -15,13 +15,12 @@ function CardSong({ song }: Props) {
         <img src={song.img} alt="img"></img>
         <div className="conteudo">
           <h1>{song.title}</h1>
-          <p>{song.artist}</p>
-          <ScoreStars
-            average={song.average}
-            countVotes={song.countVotes}
-          ></ScoreStars>
+          <p id="song-card-p">{song.artist}</p>
+          <ScoreStars average={song.average}></ScoreStars>
           <div className="buttons-card-song">
-            <ButtonVote url={"/song-of-the-year-review/" + song.id}></ButtonVote>
+            <ButtonVote
+              url={"/song-of-the-year-review/" + song.id}
+            ></ButtonVote>
             <ButtonListen url={song.url}></ButtonListen>
           </div>
         </div>

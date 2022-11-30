@@ -14,7 +14,7 @@ function CardArtist({ artist }: Props) {
         <img src={artist.image} alt="img"></img>
         <div className="conteudo">
           <h1>{artist.name}</h1>
-          <ScoreStars average={artist.average} countVotes={artist.countVotes}></ScoreStars>
+          <ScoreStars average={artist.average}></ScoreStars>
           <div className="artist-card-button">
             <ButtonVote url={"/artist-review/" + artist.id}></ButtonVote>
           </div>

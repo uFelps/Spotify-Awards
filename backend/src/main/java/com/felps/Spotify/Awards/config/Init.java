@@ -219,6 +219,139 @@ public class Init implements CommandLineRunner{
 				"For Youth,4:24"
 				));
 		albumRespository.save(proof);
+		
+		Album mrMorale = new Album(null, "Mr Morale & The Big Steppers", "Kendrick Lamar", "1h 18m", Instant.parse("2022-05-13T00:00:00Z"), "https://open.spotify.com/album/79ONNoS4M9tfIA1mYLBYVX?si=KrAytYa4QtuJTHgmMZMqOA", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/albuns/mr-morale-big-steppers.jpg?raw=true", 0.0, 0);
+		
+		mrMorale.getSongs().addAll(Arrays.asList(
+			
+				"United in Grief,4:15",
+				"N95,3:15",
+				"Worldwide Steppers,3:23",
+				"Die Hard,3:59",
+				"Father Time,3:42",
+				"Rich (Interlude),1:43",
+				"Rich Spirit,3:22",
+				"We Cry Together,5:41",
+				"Purple Hearts,5:29",
+				"Count Me Out,4:43",
+				"Crown,4:24",
+				"Silent Hill,3:40",
+				"Savior (Interlude),2:32",
+				"Savior,3:44",
+				"Auntie Diaries,4:41",
+				"Mr. Morale,3:30",
+				"Mother I Sober,6:46",
+				"Mirror,4:16",
+				"The Heart Part 5,5:32"
+				));
+		albumRespository.save(mrMorale);
+		
+		Album theCar = new Album(null, "The Car", "Arctic Monkeys", "37min 23s", Instant.parse("2022-10-21T00:00:00Z"), "https://open.spotify.com/album/2GROf0WKoP5Er2M9RXVNNs?si=psKNj9MVRRGWd4T8r9BgXQ", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/albuns/the-car.jpg?raw=true", 0.0, 0);
+		
+		theCar.getSongs().addAll(Arrays.asList(
+			
+				"There'd Better Be a Mirrorball,4:25",
+				"I Ain't Quite Where I Think I Am,3:11",
+				"Sculptures of Anything Goes,3:59",
+				"Jet Skis on the Moat,3:17",
+				"Body Paint,4:50",
+				"The Car,3:18",
+				"Big Ideas,3:57",
+				"Hello You,4:04",
+				"Mr Schwartz,3:30",
+				"Perfect Sense,2:47"
+				));
+		albumRespository.save(theCar);
+		
+		
+		Album renaissance = new Album(null, "Renaissance", "Beyoncé", "1h 2min", Instant.parse("2022-07-29T00:00:00Z"), "https://open.spotify.com/album/6FJxoadUE4JNVwWHghBwnb?si=TpsABgHmRGmwAMFRyPucFA", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/albuns/Renaissancce.jpg?raw=true", 0.0, 0);
+		
+		renaissance.getSongs().addAll(Arrays.asList(
+				"I’M THAT GIRL,3:28",
+				"COZY,3:30",
+				"ALIEN SUPERSTAR,3:35",
+				"CUFF IT,3:45",
+				"ENERGY,1:56",
+				"BREAK MY SOUL,4:38",
+				"CHURCH GIRL,3:44",
+				"PLASTIC OFF THE SOFA,4:14",
+				"VIRGO’S GROOVE,6:08",
+				"MOVE,3:23",
+				"HEATED,4:20",
+				"THIQUE,4:04",
+				"ALL UP IN YOUR MIND,2:49",
+				"AMERICA HAS A PROBLEM,3:18",
+				"PURE/HONEY,4:48",
+				"SUMMER RENAISSANCE,4:34"
+				));
+		albumRespository.save(renaissance);
+		
+		
+		Album dawnFm = new Album(null, "Dawn FM", "The Weeknd", "51min 49s", Instant.parse("2022-01-06T00:00:00Z"), "https://open.spotify.com/album/2nLOHgzXzwFEpl62zAgCEC?si=dfhzIQqvT6qniaBVaIDltQ", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/albuns/dawn-fm-.jpg?raw=true", 0.0, 0);
+		
+		dawnFm.getSongs().addAll(Arrays.asList(
+				"Dawn FM,1:37",
+				"Gasoline,3:33",
+				"How Do I Make You Love Me?,3:35",
+				"Take My Breath,5:40",
+				"Sacrifice,3:09",
+				"A Tale By Quincy,1:37",
+				"Out of Time,3:35",
+				"Here We Go… Again,3:30",
+				"Best Friends,2:44",
+				"Is There Someone Else?,3:20",
+				"Starry Eyes,2:28",
+				"Every Angel is Terrifying,2:48",
+				"Don’t Break My Heart,3:26",
+				"I Heard You’re Married,4:24",
+				"Less Than Zero,3:32",
+				"Phantom Regret by Jim,3:00"
+				));
+		albumRespository.save(dawnFm);
+		
+		Album twelve = new Album(null, "Twelve Carat Toothache", "Post Malone", "43min 49s", Instant.parse("2022-06-03T00:00:00Z"), "https://open.spotify.com/album/3HHNR44YbP7XogMVwzbodx?si=6_mp5uFzQKix3VCf1CZ46Q", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/albuns/Twelve-carat.jpg?raw=true", 0.0, 0);
+		
+		twelve.getSongs().addAll(Arrays.asList(
+				"Reputation,4:08",
+				"Cooped Up,3:06",
+				"Lemon Tree,4:03",
+				"Wrapped Around Your Finger,3:13",
+				"I Like You (A Happier Song),3:13",
+				"I Cannot Be (A Sadder Song),2:49",
+				"Insane,2:49",
+				"Love/Hate Letter to Alcohol,3:03",
+				"Wasting Angels,4:03",
+				"Euthanasia,2:25",
+				"When I’m Alone,3:15",
+				"Waiting for a Miracle,2:21",
+				"One Right Now,3:12",
+				"New Recording 12. Jan 3. 2020,1:32"
+				));
+		albumRespository.save(twelve);
+		
+		
+		Album dreamCanteen = new Album(null, "Return Of The Dream Canteen", "Red Hot Chili Peppers", "1h 15min", Instant.parse("2022-10-14T00:00:00Z"), "https://open.spotify.com/album/0KJc9ksnoJJsdpQxV3z5i1?si=aDYrWg3SQ0OEkLz-p4bz9g", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/albuns/return-of-the-dream-canteen.jpg?raw=true", 0.0, 0);
+		
+		dreamCanteen.getSongs().addAll(Arrays.asList(
+				"Tippa My Tongue,4:21",
+				"Peace and Love,4:03",
+				"Reach Out,4:12",
+				"Eddie,5:42",
+				"Fake as Fu@k,4:22",
+				"Bella,4:51",
+				"Roulette,4:57",
+				"My Cigarette,4:24",
+				"Afterlife,4:14",
+				"Shoot Me a Smile,3:43",
+				"Handful,4:00",
+				"The Drummer,3:23",
+				"Bag of Grins,5:06",
+				"La La La La La La La La,3:57",
+				"Copperbelly,3:45",
+				"Carry Me Home,4:13",
+				"In the Snow,5:55"
+				));
+		albumRespository.save(dreamCanteen);
 
 
 		

@@ -8,7 +8,7 @@ import BestPop from "pages/bestPop";
 import BestHipHop from "pages/bestHipHop";
 import BestRock from "pages/bestRock";
 import Albuns from "pages/albuns";
-import AlbumReview from "pages/albumReview";
+import AlbumFull from "pages/albumFull";
 
 function AppRoutes() {
   return (
@@ -27,8 +27,8 @@ function AppRoutes() {
         <Route path="/song-of-the-year-review">
           <Route path=":songId" element={<SongReview route="song-of-the-year"></SongReview>} />
         </Route>
-        <Route path="/album-review">
-          <Route path=":albumId" element={<AlbumReview></AlbumReview>} />
+        <Route path="/album-full">
+          <Route path=":albumId" element={<AlbumFull></AlbumFull>} />
         </Route>
       </Routes>
     </BrowserRouter>
