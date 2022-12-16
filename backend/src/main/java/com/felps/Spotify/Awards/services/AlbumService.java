@@ -9,13 +9,13 @@ import org.springframework.transaction.annotation.Transactional;
 import com.felps.Spotify.Awards.dto.AlbumDTO;
 import com.felps.Spotify.Awards.dto.AlbumSimpleDTO;
 import com.felps.Spotify.Awards.entities.Album;
-import com.felps.Spotify.Awards.repositories.AlbumRespository;
+import com.felps.Spotify.Awards.repositories.AlbumRepository;
 
 @Service
 public class AlbumService {
 	
 	@Autowired
-	private AlbumRespository repository;
+	private AlbumRepository repository;
 	
 	@Transactional(readOnly = true)
 	public Page<AlbumSimpleDTO> findAll(Pageable pageable){

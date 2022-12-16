@@ -9,6 +9,7 @@ import BestHipHop from "pages/bestHipHop";
 import BestRock from "pages/bestRock";
 import Albuns from "pages/albuns";
 import AlbumFull from "pages/albumFull";
+import AlbumReview from "pages/albumReview";
 
 function AppRoutes() {
   return (
@@ -29,6 +30,9 @@ function AppRoutes() {
         </Route>
         <Route path="/album-full">
           <Route path=":albumId" element={<AlbumFull></AlbumFull>} />
+        </Route>
+        <Route path="/album-review">
+          <Route path=":albumId" element={<AlbumReview></AlbumReview>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

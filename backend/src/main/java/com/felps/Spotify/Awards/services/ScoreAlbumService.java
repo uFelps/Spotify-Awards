@@ -9,7 +9,7 @@ import com.felps.Spotify.Awards.dto.ScoreAlbumDTO;
 import com.felps.Spotify.Awards.entities.Album;
 import com.felps.Spotify.Awards.entities.ScoreAlbum;
 import com.felps.Spotify.Awards.entities.User;
-import com.felps.Spotify.Awards.repositories.AlbumRespository;
+import com.felps.Spotify.Awards.repositories.AlbumRepository;
 import com.felps.Spotify.Awards.repositories.ScoreAlbumRepository;
 import com.felps.Spotify.Awards.repositories.UserRepository;
 
@@ -20,12 +20,12 @@ public class ScoreAlbumService {
 	private UserRepository userRepository;
 	
 	@Autowired
-	private AlbumRespository albumRespository;
+	private AlbumRepository albumRepository;
 	
 	@Autowired
 	private ScoreAlbumRepository scoreAlbumRepository;
 
-	@Transactional(readOnly = true)
+	@Transactional
 	public AlbumDTO saveScore(ScoreAlbumDTO dto) {
 		
 		User user = userRepository.findByEmail(dto.getEmail());
@@ -35,7 +35,7 @@ public class ScoreAlbumService {
 			user = userRepository.saveAndFlush(user);
 		}
 		
-		Album album = albumRespository.findById(dto.getAlbumId()).get();
+		Album album = albumRepository.findById(dto.getAlbumId()).get();
 		
 		
 		ScoreAlbum score = new ScoreAlbum(user, album, dto.getScore());
@@ -52,7 +52,7 @@ public class ScoreAlbumService {
 		
 		album.setAverage(avg);
 		album.setCountVotes(album.getScoresAlbum().size());
-		album = albumRespository.saveAndFlush(album);
+		album = albumRepository.saveAndFlush(album);
 		
 		
 		return new AlbumDTO(album);

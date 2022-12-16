@@ -15,7 +15,7 @@ import com.felps.Spotify.Awards.entities.ScoreArtist;
 import com.felps.Spotify.Awards.entities.ScoreSong;
 import com.felps.Spotify.Awards.entities.Song;
 import com.felps.Spotify.Awards.entities.User;
-import com.felps.Spotify.Awards.repositories.AlbumRespository;
+import com.felps.Spotify.Awards.repositories.AlbumRepository;
 import com.felps.Spotify.Awards.repositories.ArtistRepository;
 import com.felps.Spotify.Awards.repositories.ScoreAlbumRepository;
 import com.felps.Spotify.Awards.repositories.ScoreArtistRepository;
@@ -37,7 +37,7 @@ public class Init implements CommandLineRunner{
 	private ScoreArtistRepository scoreArtistRepository;
 	
 	@Autowired
-	private AlbumRespository albumRespository;
+	private AlbumRepository albumRespository;
 	
 	@Autowired
 	private SongRepository songRepository;
