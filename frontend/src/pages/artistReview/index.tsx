@@ -43,7 +43,7 @@ function ArtistReview() {
     };
 
     axios(config).then((response) => {
-      navegate("/");
+      navegate("/confirmationVote/artist");
     });
   };
 

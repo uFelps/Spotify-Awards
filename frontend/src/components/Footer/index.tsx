@@ -14,45 +14,45 @@ function Footer() {
               <img src={Img1} alt="logo spotify"/>
             </div>
             <div className="topico">
-              <h1>EMPRESA</h1>
-              <a href="/">
-                <h3>Sobre</h3>
+              <h1>COMPANY</h1>
+              <a href="/https://www.spotify.com/us/about-us/contact/">
+                <h3>About</h3>
               </a>
-              <a href="/">
-                <h3>Empregos</h3>{" "}
+              <a href="/https://www.lifeatspotify.com/">
+                <h3>Jobs</h3>{" "}
               </a>
-              <a href="/">
+              <a href="/https://newsroom.spotify.com/">
                 <h3>For the Record</h3>
               </a>
             </div>
             <div className="topico">
-              <h1>COMUNIDADE</h1>
-              <a href="/">
-                <h3>Para Artistas</h3>
+              <h1>COMMUNITIES</h1>
+              <a href="/https://artists.spotify.com/">
+                <h3>For Artists</h3>
               </a>
-              <a href="/">
-                <h3>Desenvolvedores</h3>
+              <a href="/https://developer.spotify.com/">
+                <h3>Developers</h3>
               </a>
-              <a href="/">
-                <h3>Publicidade</h3>{" "}
+              <a href="/https://ads.spotify.com/">
+                <h3>Advertising</h3>{" "}
               </a>
-              <a href="/">
-                <h3>Investidores</h3>
+              <a href="/https://investors.spotify.com/">
+                <h3>Investors</h3>
               </a>
-              <a href="/">
-                <h3>Fornecedores</h3>
+              <a href="/https://spotifyforvendors.com/">
+                <h3>Vendors</h3>
               </a>
             </div>
             <div className="topico">
-              <h1>LINKS ÚTEIS</h1>
-              <a href="/">
-                <h3>Suporte</h3>
+              <h1>USEFULL LINKS</h1>
+              <a href="/https://support.spotify.com/">
+                <h3>Support</h3>
               </a>
-              <a href="/">
-                <h3>Player da Web</h3>{" "}
+              <a href="/https://open.spotify.com/">
+                <h3>Web Player</h3>{" "}
               </a>
-              <a href="/">
-                <h3>Aplicativo móvel grátis</h3>
+              <a href="/https://www.spotify.com/us/free/">
+                <h3>Free Mobile App</h3>
               </a>
             </div>
             <div className="redes">
@@ -71,7 +71,7 @@ function Footer() {
             </div>
           </div>
           <div className="createby">
-            <p>Spotify | ® Todos os direitos reservados</p>
+            <p>Spotify | ® All rights reserved</p>
             <p>Created by uFelps</p>
             <p>2022</p>
           </div>

@@ -1,4 +1,4 @@
-import Img from "assets/img/celular.png";
+import Img from "assets/img/john.png";
 import "./style.css";
 
 function Painel() {

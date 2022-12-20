@@ -46,16 +46,16 @@ function SongReview({ route }: Props) {
 
     axios(config).then((response) => {
       if (song?.indicatedBestSong) {
-        navegate("/songs-of-the-year");
+        navegate("/confirmationVote/songs");
       } else if (song?.indicatedBestCategory) {
         if (song.category === "Pop") {
-          navegate("/best-pop");
+          navegate("/confirmationVote/best-pop");
         }
         if (song.category === "Rock") {
-          navegate("/best-rock");
+          navegate("/confirmationVote/best-rock");
         }
         if (song.category === "Hip-Hop") {
-          navegate("/best-hip-hop");
+          navegate("/confirmationVote/best-hip-hop");
         }
       }
     });

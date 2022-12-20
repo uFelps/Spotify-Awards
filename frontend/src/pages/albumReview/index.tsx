@@ -40,8 +40,10 @@ function AlbumReview() {
         },
       };
   
+
+      
       axios(config).then((response) => {
-        navegate("/");
+        navegate("/confirmationVote/album");
       });
     };
 
@@ -80,7 +82,7 @@ function AlbumReview() {
               </select>
             </div>
             <div className="buttons">
-              <Link to={"/"}>
+              <Link to={"/albuns"}>
                 <button id="cancelar">Cancelar</button>
               </Link>
               <button type="submit" id="salvar">

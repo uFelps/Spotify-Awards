@@ -10,6 +10,7 @@ import BestRock from "pages/bestRock";
 import Albuns from "pages/albuns";
 import AlbumFull from "pages/albumFull";
 import AlbumReview from "pages/albumReview";
+import ConfirmationVote from "pages/confirmationVote";
 
 function AppRoutes() {
   return (
@@ -33,6 +34,14 @@ function AppRoutes() {
         </Route>
         <Route path="/album-review">
           <Route path=":albumId" element={<AlbumReview></AlbumReview>}></Route>
+        </Route>
+        <Route path="/confirmationVote">
+          <Route path=":album" element={<ConfirmationVote url="/albuns"></ConfirmationVote>}></Route>
+          <Route path=":artist" element={<ConfirmationVote url="/artists"></ConfirmationVote>}></Route>
+          <Route path=":songs" element={<ConfirmationVote url="/songs-of-the-year"></ConfirmationVote>}></Route>
+          <Route path=":best-pop" element={<ConfirmationVote url="/best-pop"></ConfirmationVote>}></Route>
+          <Route path=":best-hip-hop" element={<ConfirmationVote url="/best-hip-hop"></ConfirmationVote>}></Route>
+          <Route path=":best-rock" element={<ConfirmationVote url="/best-rock"></ConfirmationVote>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
