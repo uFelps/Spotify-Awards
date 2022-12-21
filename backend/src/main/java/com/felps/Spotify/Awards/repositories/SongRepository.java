@@ -10,8 +10,8 @@ import com.felps.Spotify.Awards.entities.Song;
 
 public interface SongRepository extends JpaRepository<Song, Long>{
 
-	Page<Song> findAllByIndicatedBestSong(boolean indicated, Pageable pageable);
+	Page<Song> findAllByIndicatedBestSongOrderByIdAsc(boolean indicated, Pageable pageable);
 	
-	@Query("SELECT obj FROM Song obj WHERE obj.category = :category AND obj.indicatedBestCategory = true")
-	Page<Song> findByCategory(String category, Pageable pageable);
+	@Query("SELECT obj FROM Song obj WHERE obj.category = :category AND obj.indicatedBestCategory = true ORDER BY obj.id ASC")
+	Page<Song> findByCategoryOrderByIdAsc(String category, Pageable pageable);
 }

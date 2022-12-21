@@ -35,14 +35,13 @@ function AppRoutes() {
         <Route path="/album-review">
           <Route path=":albumId" element={<AlbumReview></AlbumReview>}></Route>
         </Route>
-        <Route path="/confirmationVote">
-          <Route path=":album" element={<ConfirmationVote url="/albuns"></ConfirmationVote>}></Route>
-          <Route path=":artist" element={<ConfirmationVote url="/artists"></ConfirmationVote>}></Route>
-          <Route path=":songs" element={<ConfirmationVote url="/songs-of-the-year"></ConfirmationVote>}></Route>
-          <Route path=":best-pop" element={<ConfirmationVote url="/best-pop"></ConfirmationVote>}></Route>
-          <Route path=":best-hip-hop" element={<ConfirmationVote url="/best-hip-hop"></ConfirmationVote>}></Route>
-          <Route path=":best-rock" element={<ConfirmationVote url="/best-rock"></ConfirmationVote>}></Route>
-        </Route>
+        <Route path="/confirmationVote/album" element={<ConfirmationVote url="/albuns"></ConfirmationVote>}></Route>
+        <Route path="/confirmationVote/artist" element={<ConfirmationVote url="/artists"></ConfirmationVote>}></Route>
+        <Route path="/confirmationVote/songs" element={<ConfirmationVote url="/songs-of-the-year"></ConfirmationVote>}></Route>
+        <Route path="/confirmationVote/best-pop" element={<ConfirmationVote url="/best-pop"></ConfirmationVote>}></Route>
+        <Route path="/confirmationVote/best-hip-hop" element={<ConfirmationVote url="/best-hip-hop"></ConfirmationVote>}></Route>
+        <Route path="/confirmationVote/best-rock" element={<ConfirmationVote url="/best-rock"></ConfirmationVote>}></Route>
+        
       </Routes>
     </BrowserRouter>
   );

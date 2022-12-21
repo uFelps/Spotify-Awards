@@ -20,7 +20,7 @@ public class ArtistService {
 	@Transactional(readOnly = true)
 	public Page<ArtistDTO> findAll(Pageable pageable) {
 
-		Page<Artist> artists = repository.findAll(pageable);
+		Page<Artist> artists = repository.findAllByOrderByIdAsc(pageable);
 		
 		Page<ArtistDTO> artistsDTO = artists.map(x -> new ArtistDTO(x));
 		

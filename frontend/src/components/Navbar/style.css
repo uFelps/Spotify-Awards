@@ -2,7 +2,7 @@ header {
   background-color: black;
   display: flex;
   align-items: center;
-  height: 100px;
+  height: 80px;
   color: white;
   position: sticky;
   top: 0;
@@ -21,8 +21,7 @@ header {
 }
 
 .logo svg {
-  width: 167px;
-  height: 50px;
+  width: 140px;
 }
 
 .logo {
@@ -52,7 +51,7 @@ header {
 
 @media (max-width: 800px) {
 header{
-  height: 80px;
+  height: 50px;
 }
 
   #navbar {
@@ -99,7 +98,7 @@ header{
   }
 
   .logo svg {
-    width: 120px;
+    width: 100px;
     height: 50px;
   }
 

@@ -19,7 +19,7 @@ public class AlbumService {
 	
 	@Transactional(readOnly = true)
 	public Page<AlbumSimpleDTO> findAll(Pageable pageable){
-		Page<Album> albuns = repository.findAll(pageable);
+		Page<Album> albuns = repository.findAllByOrderByIdAsc(pageable);
 		
 		Page<AlbumSimpleDTO> albunsSimpleDTO = albuns.map(x -> new AlbumSimpleDTO(x));
 		

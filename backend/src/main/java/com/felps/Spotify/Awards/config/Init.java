@@ -51,13 +51,6 @@ public class Init implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		User maria = new User(null, "maria@gmail.com"); 
-		User alex = new User(null, "alex@gmail.com");
-		User joao = new User(null, "joao@gmail.com"); 
-		User ana = new User(null, "ana@gmail.com");
-		User lucas = new User(null, "lucas@gmail.com"); 
-		User joaquim = new User(null, "joaquim@gmail.com");
-		userRepository.saveAll(Arrays.asList(maria, alex, joao, ana, lucas, joaquim));
 		
 		
 		Artist harry = new Artist(null, "Harry Styles", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/artists/harry.jpeg.png?raw=true" , "63.961.408", 0.0, 0);
@@ -68,34 +61,9 @@ public class Init implements CommandLineRunner{
 		Artist taylor = new Artist(null, "Taylor Swift", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/artists/taylor-swif.jpg.png?raw=true" , "83.546.017", 0.0, 0);
 		
 		artistRepository.saveAll(Arrays.asList(harry, kendrick, post, doja, billie, taylor));
+	
 		
-		
-		/*ScoreArtist sa1 = new ScoreArtist(rhcp, maria, 4.0);		
-		ScoreArtist sa2 = new ScoreArtist(rhcp, alex, 5.0);
-		ScoreArtist sa3 = new ScoreArtist(kendrick, joao, 5.0);
-		ScoreArtist sa4 = new ScoreArtist(kendrick, ana, 5.0);
-		ScoreArtist sa5 = new ScoreArtist(kendrick, lucas, 5.0);
-		scoreArtistRepository.saveAll(Arrays.asList(sa1, sa2, sa3, sa4, sa5));*/
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		/*ScoreAlbum sd1 = new ScoreAlbum(maria, unlimitedLove, 5.0);
-		ScoreAlbum sd2 = new ScoreAlbum(alex, unlimitedLove, 5.0);
-		scoreAlbumRepository.saveAll(Arrays.asList(sd1, sd2));
-		
-		ScoreSong sg1 = new ScoreSong(maria, blackSummer, 5.0);
-		ScoreSong sg2 = new ScoreSong(maria, whatchuthinkin, 5.0);
-		ScoreSong sg3 = new ScoreSong(alex, blackSummer, 5.0);
-		ScoreSong sg4 = new ScoreSong(alex, whatchuthinkin, 5.0);
-		scoreSongRepository.saveAll(Arrays.asList(sg1,sg2,sg3,sg4));*/
-		
-		/*songs of the year*/
+		//songs of the year
 		Song asIsWas = new Song(null, "As is Was", "Harry Styles", "2:37", "Pop", true, false, "https://open.spotify.com/track/4LRPiXqCikLlN15c3yImP7?si=8405e2769bfa4d9a", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/songs-of-the-year/As-It-Was.png?raw=true", 0.0, 0);
 		Song antiHero = new Song(null, "Anti-Hero", "Taylor Swift", "3:20", "Pop", true, false, "https://open.spotify.com/track/0V3wPSX9ygBnCm8psDIegu?si=a215a95cb3404e20", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/songs-of-the-year/anti-hero.png?raw=true", 0.0, 0);
 		Song n95 = new Song(null, "N95", "Kendrick Lamar", "3:52", "Hip-Hop", true, false, "https://open.spotify.com/track/0fX4oNGBWO3dSGUZcVdVV2?si=015798ae3c7e4dc3", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/songs-of-the-year/n95.png?raw=true", 0.0, 0);
@@ -104,7 +72,7 @@ public class Init implements CommandLineRunner{
 		Song missYou = new Song(null, "Miss You", "Oliver Tree", "3:26", "Pop", true, false, "https://open.spotify.com/track/73vIOb4Q7YN6HeJTbscRx5?si=7c58689be9c14ecf", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/songs-of-the-year/missyou.jpg.png?raw=true", 0.0, 0);
 		songRepository.saveAll(Arrays.asList(asIsWas, antiHero, n95, ilikeyou, blackSummer, missYou));
 		
-		/*best pop*/
+		//best pop
 		Song unroly = new Song(null, "Unholy", "Sam Smith, Kim Petras", "2:36", "Pop", false, true, "https://open.spotify.com/track/3nqQXoyQOWXiESFLlDF1hG?si=023b3f1087dc441c", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/best-pop/unholy.jpg.png?raw=true", 0.0, 0);
 		Song breakMySoul = new Song(null, "Break My Soul", "Beyoncé", "4:38", "Pop", false, true, "https://open.spotify.com/track/2KukL7UlQ8TdvpaA7bY3ZJ?si=28d00316fcab437c", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/best-pop/breakmysoul.jpeg.png?raw=true", 0.0, 0);
 		Song late = new Song(null, "Late Night Talking", "Harry Styles", "2:57", "Pop", false, true, "https://open.spotify.com/track/1qEmFfgcLObUfQm0j1W2CK?si=b9920c0c6ad24468", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/best-pop/lateNightTalking.png?raw=true", 0.0, 0);
@@ -115,7 +83,7 @@ public class Init implements CommandLineRunner{
 		songRepository.saveAll(Arrays.asList(dynamite,unroly, breakMySoul, late, lavender,butter));
 		
 		
-		/*best hip hop*/
+		//best hip hop
 		Song dieHard = new Song(null, "Die Hard", "Kendrick Lamar", "3:59", "Hip-Hop", false, true, "https://open.spotify.com/track/2g6tReTlM2Akp41g0HaeXN?si=d6cb3d5642ff4236", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/best-hip-hop/diehard.png?raw=true", 0.0, 0);
 		Song jimmy = new Song(null, "Jimmy Cooks", "Drake, 21 Savage", "3:38", "Hip-Hop", false, true, "https://open.spotify.com/track/3F5CgOj3wFlRv51JsHbxhe?si=308b31923d224861", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/best-hip-hop/jimmy.png?raw=true", 0.0, 0);
 		Song cooped = new Song(null, "Cooped Up", "Post Malone, Roddy Ricch", "3:05", "Hip-Hop", false, true, "https://open.spotify.com/track/7DwcBgdzqhFJltEaV1XF81?si=58e6287474444f8b", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/best-hip-hop/cooppedup.png?raw=true", 0.0, 0);
@@ -125,7 +93,7 @@ public class Init implements CommandLineRunner{
 		
 		songRepository.saveAll(Arrays.asList(island,dieHard, jimmy, cooped, family, rich ));
 		
-		/*best rock*/
+		//best rock
 		Song tippa = new Song(null, "Tippa My Tongue", "Red Hot Chili Peppers", "4:20", "Rock", false, true, "https://open.spotify.com/track/3s53zBEi1ZU6dJj19eFOxW?si=316e19c326004699", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/best-rock/tippamytoungue.png?raw=true", 0.0, 0);
 		Song thisIsWay = new Song(null, "This is Why", "Paramore", "3:27", "Rock", false, true, "https://open.spotify.com/track/7z84Fwf1R3Z2BwHCP620CI?si=460092134e524df7", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/best-rock/thisisway.png?raw=true", 0.0, 0);
 		Song body = new Song(null, "Body Paint", "Arctic Monkeys", "4:50", "Rock", false, true, "https://open.spotify.com/track/42GuKw49pPxNAkIhWGwgFs?si=4632d7295b214dfa", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/best-rock/bodypaint.png?raw=true", 0.0, 0);
@@ -136,7 +104,7 @@ public class Init implements CommandLineRunner{
 		songRepository.saveAll(Arrays.asList(tippa, thisIsWay, body, dying, patient, these));
 		
 		
-		/*albuns of the year*/
+		//albuns of the year
 		Album unlimitedLove = new Album(null, "Unlimited Love", "Red Hot Chili Peppers", "1h 13m", Instant.parse("2022-04-01T00:00:00Z"), "https://open.spotify.com/album/2ITVvrNiINKRiW7wA3w6w6?si=8-gc2h3iSB2sVeXLdtWnHA", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/albuns/unlimited-love.jpg?raw=true", 0.0, 0);
 		
 		unlimitedLove.getSongs().addAll(Arrays.asList(
@@ -352,8 +320,7 @@ public class Init implements CommandLineRunner{
 				"In the Snow,5:55"
 				));
 		albumRespository.save(dreamCanteen);
-
-
+		
 		
 	}
 

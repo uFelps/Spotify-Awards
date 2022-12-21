@@ -17,7 +17,7 @@ public class SongService {
 	private SongRepository repository;
 
 	public Page<SongDTO> findSongsOfTheYear(Pageable pageable) {
-		Page<Song> songs = repository.findAllByIndicatedBestSong(true, pageable);
+		Page<Song> songs = repository.findAllByIndicatedBestSongOrderByIdAsc(true, pageable);
 
 		Page<SongDTO> songsDTO = songs.map(x -> new SongDTO(x));
 
@@ -33,7 +33,7 @@ public class SongService {
 	}
 
 	public Page<SongDTO> findByCategory(String category, Pageable pageable) {
-		Page<Song> songs = repository.findByCategory(category, pageable);
+		Page<Song> songs = repository.findByCategoryOrderByIdAsc(category, pageable);
 
 		Page<SongDTO> songsDTO = songs.map(x -> new SongDTO(x));
 
