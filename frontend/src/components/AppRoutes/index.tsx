@@ -16,7 +16,7 @@ function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Main></Main>}></Route>
+        <Route path={"/"} element={<Main></Main>}></Route>
         <Route path="/artists" element={<Artists></Artists>}></Route>
         <Route path="/albuns" element={<Albuns></Albuns>}></Route>
         <Route path="/songs-of-the-year" element={<SongsOfTheYear></SongsOfTheYear>}></Route>
