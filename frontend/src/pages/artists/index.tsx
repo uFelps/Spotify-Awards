@@ -33,10 +33,6 @@ function Artists() {
         color="linear-gradient(to right, #060D3B, #02C5C7)"
       ></SpotifyPresents>
       <div className="artists">
-        <div className="title">
-          <h1>Artists</h1>
-        </div>
-
         <div className="container">
           <div className="row">
             {artists.content.map((artist) => (

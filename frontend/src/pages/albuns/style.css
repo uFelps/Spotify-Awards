@@ -4,10 +4,6 @@
     flex-wrap: wrap;
 }
 
-.albuns-title{
-    text-align: center;
-}
-
 .container{
     display: flex;
     justify-content: center;
@@ -17,4 +13,10 @@
     display: flex;
     justify-content: center;
 
+}
+
+@media (max-width: 800px) {
+    .albuns{
+        padding: 20px 0px 40px 0px;
+    }
 }

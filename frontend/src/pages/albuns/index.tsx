@@ -33,10 +33,6 @@ function Albuns(){
         <>
         <SpotifyPresents title="Albuns Of The Year" color="linear-gradient(to right, #2D2055,#614FB1)"></SpotifyPresents>
         <div className="albuns">
-        <div className="albuns-title">
-          <h1>Albuns</h1>
-        </div>
-
         <div className="container">
           <div className="row">
             {albuns.content.map((album) => (

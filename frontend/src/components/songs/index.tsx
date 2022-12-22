@@ -45,9 +45,6 @@ function Songs({title, url, color} : Props) {
         color={color}
       ></SpotifyPresents>
       <div className="songs">
-        <div className="title">
-          <h1>Songs</h1>
-        </div>
         <div className="container">
           <div className="row">
             {songs.content.map((song) => (

@@ -28,3 +28,9 @@
 .artist-card-button{
     margin: 10px 0px 0px 0px;
 }
+
+@media (max-width: 800px) {
+    .conteudo h1{
+        font-size: 18px;
+    }
+}
