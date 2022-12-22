@@ -35,6 +35,11 @@
 }
 
 @media (max-width: 800px){
+
+  .albumFullSong{
+    padding: 0px 10% 0px 8%;
+  }
+
   .albumFullSong p{
     display: none;
   }

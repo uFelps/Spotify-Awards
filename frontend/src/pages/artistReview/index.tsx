@@ -70,13 +70,13 @@ function ArtistReview() {
             <p id="listeners">{artist?.listeners} Listeners</p>
           </div>
 
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="form-review">
             <div className="email">
-              <label>Informe seu Email</label>
+              <label>Inform your email</label>
               <input type="email" id="email"></input>
             </div>
             <div>
-              <label>Informe sua avaliação</label>
+              <label>Submit your review</label>
               <select id="score">
                 <option>1</option>
                 <option>2</option>
@@ -87,10 +87,10 @@ function ArtistReview() {
             </div>
             <div className="buttons">
               <Link to={"/"}>
-                <button id="cancelar">Cancelar</button>
+                <button id="cancelar">Cancel</button>
               </Link>
               <button type="submit" id="salvar">
-                Salvar
+                Save
               </button>
             </div>
           </form>

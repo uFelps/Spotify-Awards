@@ -68,7 +68,7 @@ function AlbumReview() {
             <p id="song-artist">{album?.artist}</p>
           </div>
 
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="form-review">
             <div className="email">
               <label>Inform your email</label>
               <input type="email" id="email"></input>
@@ -85,10 +85,10 @@ function AlbumReview() {
             </div>
             <div className="buttons">
               <Link to={"/albuns"}>
-                <button id="cancelar">Cancelar</button>
+                <button id="cancelar">Cancel</button>
               </Link>
               <button type="submit" id="salvar">
-                Salvar
+                Save
               </button>
             </div>
           </form>
