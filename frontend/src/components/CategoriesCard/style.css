@@ -1,12 +1,11 @@
 .card {
   width: 370px;
-  position: relative;
   transition: all 0.3s ease-in-out;
 }
 
 .card:hover {
-  top: -3px;
   box-shadow: 0 5px 5px #00A140;
+  color: white;
 }
 
 @media (max-width: 800px) {
