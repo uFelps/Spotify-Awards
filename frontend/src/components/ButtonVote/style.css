@@ -1,5 +1,5 @@
 
-.bt{
+.buttonVote{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,7 +12,7 @@
     border: none;
 }
 
-.bt:hover{
+.buttonVote:hover{
     background-color: #D9D9D9;
     color: #00A140;
 }

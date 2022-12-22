@@ -8,7 +8,7 @@ function ButtonVote({url} : Props) {
   return (
     <>
       <a href={url} className="link">
-        <button className="bt">Vote</button>
+        <button className="buttonVote">Vote</button>
       </a>
     </>
   );

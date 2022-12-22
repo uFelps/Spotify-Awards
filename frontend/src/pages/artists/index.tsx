@@ -1,5 +1,6 @@
 import axios from "axios";
 import CardArtist from "components/CardArtist";
+import Loader from "components/Loader";
 import SpotifyPresents from "components/Spotify Presents";
 import { useEffect, useState } from "react";
 import { ArtistPage } from "types/artist";
@@ -19,10 +20,13 @@ function Artists() {
     empty: true,
   });
 
+  const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     axios.get(`${BASE_URL}/artists`).then((response) => {
       const data = response.data as ArtistPage;
       setArtists(data);
+      setIsLoaded(true);
     });
   }, []);
 
@@ -33,6 +37,7 @@ function Artists() {
         color="linear-gradient(to right, #060D3B, #02C5C7)"
       ></SpotifyPresents>
       <div className="artists">
+      {!isLoaded && <Loader></Loader>}
         <div className="container">
           <div className="row">
             {artists.content.map((artist) => (

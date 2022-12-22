@@ -5,6 +5,7 @@ import axios, { AxiosRequestConfig } from "axios";
 import { BASE_URL } from "util/requests";
 import { Song } from "types/song";
 import { validateEmail } from "util/validade";
+import Loader from "components/Loader";
 
 type Props = {
   route: string;
@@ -16,9 +17,12 @@ function SongReview({ route }: Props) {
 
   const [song, setSong] = useState<Song>();
 
+  const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     axios.get(`${BASE_URL}/${route}/${params.songId}`).then((response) => {
       setSong(response.data);
+      setIsLoaded(true);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -67,6 +71,7 @@ function SongReview({ route }: Props) {
         <h1>Song Review</h1>
       </div>
       <div className="song-data">
+        {!isLoaded && <Loader></Loader>}
         <div className="imagem">
           <img src={song?.img} alt="songimg" />
         </div>

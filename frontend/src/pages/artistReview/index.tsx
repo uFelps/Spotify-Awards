@@ -6,6 +6,7 @@ import { BASE_URL } from "util/requests";
 import { Artist } from "types/artist";
 import { Link } from "react-router-dom";
 import { validateEmail } from "util/validade";
+import Loader from "components/Loader";
 
 function ArtistReview() {
   const params = useParams();
@@ -14,9 +15,14 @@ function ArtistReview() {
 
   const [artist, setArtist] = useState<Artist>();
 
+  const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     axios.get(`${BASE_URL}/artists/${params.artistId}`).then((response) => {
-      setArtist(response.data);
+      setTimeout(() => {
+        setArtist(response.data);
+        setIsLoaded(true);
+      }, 4000);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -54,6 +60,7 @@ function ArtistReview() {
       </div>
       <div className="artist-data">
         <div className="imagem">
+          {!isLoaded && <Loader></Loader>}
           <img src={artist?.image} alt="artistimg" />
         </div>
 

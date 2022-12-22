@@ -1,5 +1,6 @@
 import axios from "axios";
 import CardSong from "components/CardSong";
+import Loader from "components/Loader";
 import SpotifyPresents from "components/Spotify Presents";
 import { useEffect, useState } from "react";
 import { SongPage } from "types/song";
@@ -26,11 +27,14 @@ function Songs({title, url, color} : Props) {
     empty: true,
   });  
 
+  const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     axios.get(`${BASE_URL}${url}`)
     .then((response) => {
         const data = response.data as SongPage;
         setSongs(data);
+        setIsLoaded(true)
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -45,6 +49,7 @@ function Songs({title, url, color} : Props) {
         color={color}
       ></SpotifyPresents>
       <div className="songs">
+      {!isLoaded && <Loader></Loader>}
         <div className="container">
           <div className="row">
             {songs.content.map((song) => (

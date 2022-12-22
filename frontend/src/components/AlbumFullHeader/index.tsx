@@ -2,18 +2,24 @@ import PlayOnSpotify from "components/ButtonPlayOnSpotify";
 import ButtonVote from "components/ButtonVote";
 import ScoreStars from "components/ScoreStars";
 import { Album } from "types/album";
+import {useState} from 'react';
 import "./style.css";
+import Loader from "components/Loader";
 
 type Props = {
   album: Album;
 };
 
 function AlbumFullHeader({ album }: Props) {
+
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
     <>
       <div className="album-full">
-        <div className="album-full-header">
-          <img src={album.img} alt="capa" id="album-capa"></img>
+        {!isLoaded && <Loader></Loader>}
+        <div className="album-full-header">  
+          <img src={album.img} alt="capa" id="album-capa" onLoad={()=>{setIsLoaded(true)}}></img>
           <div className="album-review-content">
             <h1 id="album-h1">ALBUM</h1>
             <h1>{album.name}</h1>

@@ -1,5 +1,6 @@
 import axios from "axios";
 import CardAlbum from "components/CardAlbum";
+import Loader from "components/Loader";
 import SpotifyPresents from "components/Spotify Presents";
 import { useState, useEffect } from 'react';
 import { AlbumPage } from "types/album";
@@ -20,11 +21,14 @@ function Albuns(){
         numberOfElements: 0,
         empty: true,
       });
+
+      const [isLoaded, setIsLoaded] = useState(false);
     
     useEffect(() => {
         axios.get(`${BASE_URL}/albuns`)
         .then((response) => {
             setAlbuns(response.data);
+            setIsLoaded(true)
         });
     }, []);
 
@@ -33,6 +37,7 @@ function Albuns(){
         <>
         <SpotifyPresents title="Albuns Of The Year" color="linear-gradient(to right, #2D2055,#614FB1)"></SpotifyPresents>
         <div className="albuns">
+        {!isLoaded && <Loader></Loader>}
         <div className="container">
           <div className="row">
             {albuns.content.map((album) => (

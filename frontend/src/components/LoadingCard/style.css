@@ -1,0 +1,14 @@
+#loadingSongCard{
+    width: 50px;
+}
+
+.loadingSongCard{
+    background-color: white;
+    width: 300px;
+    height: 140px;
+    border-radius: 10px;
+    margin: 30px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
