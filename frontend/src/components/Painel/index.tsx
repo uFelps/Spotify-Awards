@@ -8,8 +8,8 @@ function Painel() {
         <div className="box">
           <div className="text">
             <p>Spotify Presents</p>
-            <h1>Spotify Awards</h1>
-            <h4>Rate the top artists, albums and songs of the year.</h4>
+            <h1>Spotify Awards 2022</h1>
+            <h4>Rate the top artists, albuns and songs of the year.</h4>
           </div>
           <div className="img-celular">
             <img src={Img} alt="Celular Spotify" />

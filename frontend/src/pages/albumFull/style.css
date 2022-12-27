@@ -4,7 +4,15 @@
 }
 
 .album-date{
-    margin: 40px 0px 0px 8%;
+    margin: 40px 0px 0px 0px;
+    padding: 0px 10% 0px 16%;
     color: #BBBBBB;
     font-size: 16px;
+}
+
+@media (max-width: 800px){
+
+    .albumFullSong{
+      padding: 0px 10% 0px 8%;
+    }
 }

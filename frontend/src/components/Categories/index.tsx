@@ -19,22 +19,22 @@ function Categories() {
 
         <div className="container">
           <div className="row">
-            <div className="col-sm-12 col-md-6 col-lg-4 cards">
+            <div className="col-sm-12 col-md-6 col-xl-4 cards">
               <a href="/artists"><CategoriesCard img={Img1}></CategoriesCard></a>
             </div>
-            <div className="col-sm-12 col-md-6 col-lg-4 cards">
+            <div className="col-sm-12 col-md-6 col-xl-4 cards">
             <a href="/albuns"><CategoriesCard img={Img2}></CategoriesCard></a>
             </div>
-            <div className="col-sm-12 col-md-6 col-lg-4 cards">
+            <div className="col-sm-12 col-md-6 col-xl-4 cards">
               <a href="/songs-of-the-year"><CategoriesCard img={Img3}></CategoriesCard></a>
             </div>
-            <div className="col-sm-12 col-md-6 col-lg-4 cards">
+            <div className="col-sm-12 col-md-6 col-xl-4 cards">
               <a href="/best-pop"><CategoriesCard img={Img4}></CategoriesCard></a>
             </div>
-            <div className="col-sm-12 col-md-6 col-lg-4 cards">
+            <div className="col-sm-12 col-md-6 col-xl-4 cards">
             <a href="/best-rock"><CategoriesCard img={Img5}></CategoriesCard></a>
             </div>
-            <div className="col-sm-12 col-md-6 col-lg-4 cards">
+            <div className="col-sm-12 col-md-6 col-xl-4 cards">
             <a href="/best-hip-hop"><CategoriesCard img={Img6}></CategoriesCard></a>
             </div>
           </div>

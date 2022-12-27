@@ -1,5 +1,5 @@
 .background {
-  background-color: #00a140;
+  background-image: linear-gradient(to right, #7F09A2,#263371);
   display: flex;
   justify-content: center;
   height: 500px;
@@ -61,7 +61,7 @@
   }
 
   .text h1 {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
   }
 
