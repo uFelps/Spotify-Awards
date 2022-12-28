@@ -5,6 +5,10 @@ Este é um projeto voltado para a música, onde as pessoas podem avaliar os seus
 
 &nbsp;
 
+<div align="center">
+  <img style="border-radius: 20px" width="80%" margin="30px" src="https://github.com/uFelps/assets/blob/main/Spotify-Awards/spotify-awards.png?raw=true"/>
+  </div>
+&nbsp;
 <p align="center">
   <a href="https://spotifyawards.netlify.app/" target="_blank">
     <img alt="Demo on Netlify" src="https://res.cloudinary.com/lukemorales/image/upload/v1599785319/readme_logos/demo_on_netlify_umjmch.png">
