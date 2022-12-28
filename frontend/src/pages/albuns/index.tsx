@@ -35,7 +35,7 @@ function Albuns(){
 
     return(
         <>
-        <SpotifyPresents title="Albuns Of The Year" color="linear-gradient(to right, #2D2055,#614FB1)"></SpotifyPresents>
+        <SpotifyPresents title="Albums Of The Year" color="linear-gradient(to right, #2D2055,#614FB1)"></SpotifyPresents>
         <div className="albuns">
         {!isLoaded && <Loader></Loader>}
         <div className="container">

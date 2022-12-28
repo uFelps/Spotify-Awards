@@ -22,7 +22,7 @@ function Navbar() {
         <nav id="navbar" className={click ? "navbar-active" : "dis"}>
             <i className={"bi bi-x-circle"} onClick={handleClick}></i>
             <a href={'/artists'} className="links" onClick={handleClick}>Artists</a>
-            <a href={'/albuns'} className="links" onClick={handleClick}>Albuns</a>
+            <a href={'/albuns'} className="links" onClick={handleClick}>Albums</a>
             <a href={'/songs-of-the-year'} className="links" onClick={handleClick}>Songs</a>
             <a href={'/best-pop'} className="links" onClick={handleClick}>Pop</a>
             <a href={'/best-hip-hop'} className="links" onClick={handleClick}>Hip-Hop</a>
