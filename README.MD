@@ -65,7 +65,7 @@ cd backend
 ```
 
 ### Frontend
-Clone Repository: NodeJS, NPM, Yarn
+Requirements: NodeJS, NPM, Yarn
 &nbsp;
 
 ```
