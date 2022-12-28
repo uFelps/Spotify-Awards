@@ -1,7 +1,7 @@
 # Spotify Awards
 
-## Sobre
-Este é um projeto voltado para a música, onde as pessoas podem avaliar os seus artistas, músicas e albuns favoritos de 2022.
+## About
+This is a project where people can rate their favorite 2022 artists, songs and albums.
 
 &nbsp;
 
@@ -65,7 +65,7 @@ cd backend
 ```
 
 ### Frontend
-Clone Repository: NodeJS, NPM, Yarn
+Requirements: NodeJS, NPM, Yarn
 &nbsp;
 
 ```
