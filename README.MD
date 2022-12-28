@@ -1,7 +1,7 @@
 # Spotify Awards
 
 ## About
-This is a project where people can rate their favorite 2022 artists, songs and albums.
+This is a project where people can rate their favorite 2022 artists, songs and albuns.
 
 &nbsp;
 
