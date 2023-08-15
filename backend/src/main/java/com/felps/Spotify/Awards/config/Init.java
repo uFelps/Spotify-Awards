@@ -64,13 +64,13 @@ public class Init implements CommandLineRunner{
 	
 		
 		//songs of the year
-		Song asIsWas = new Song(null, "As is Was", "Harry Styles", "2:37", "Pop", true, false, "https://open.spotify.com/track/4LRPiXqCikLlN15c3yImP7?si=8405e2769bfa4d9a", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/songs-of-the-year/As-It-Was.png?raw=true", 0.0, 0);
+		Song asItWas = new Song(null, "As it Was", "Harry Styles", "2:37", "Pop", true, false, "https://open.spotify.com/track/4LRPiXqCikLlN15c3yImP7?si=8405e2769bfa4d9a", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/songs-of-the-year/As-It-Was.png?raw=true", 0.0, 0);
 		Song antiHero = new Song(null, "Anti-Hero", "Taylor Swift", "3:20", "Pop", true, false, "https://open.spotify.com/track/0V3wPSX9ygBnCm8psDIegu?si=a215a95cb3404e20", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/songs-of-the-year/anti-hero.png?raw=true", 0.0, 0);
 		Song n95 = new Song(null, "N95", "Kendrick Lamar", "3:52", "Hip-Hop", true, false, "https://open.spotify.com/track/0fX4oNGBWO3dSGUZcVdVV2?si=015798ae3c7e4dc3", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/songs-of-the-year/n95.png?raw=true", 0.0, 0);
 		Song ilikeyou = new Song(null, "I Like You", "Post Malone, Doja Cat", "3:52", "Pop", true, false, "https://open.spotify.com/track/0O6u0VJ46W86TxN9wgyqDj?si=cbf08479c29e488a", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/songs-of-the-year/I-Like-You.jpg.png?raw=true", 0.0, 0);
 		Song blackSummer = new Song(null, "Black Summer", "Red Hot Chili Peppers", "3:52", "Rock", true, false, "https://open.spotify.com/track/3a94TbZOxhkI9xuNwYL53b?si=0d58ac9f99164ce3", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/songs-of-the-year/black-summer.jpg.png?raw=true", 0.0, 0);
 		Song missYou = new Song(null, "Miss You", "Oliver Tree", "3:26", "Pop", true, false, "https://open.spotify.com/track/73vIOb4Q7YN6HeJTbscRx5?si=7c58689be9c14ecf", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/songs-of-the-year/missyou.jpg.png?raw=true", 0.0, 0);
-		songRepository.saveAll(Arrays.asList(asIsWas, antiHero, n95, ilikeyou, blackSummer, missYou));
+		songRepository.saveAll(Arrays.asList(asItWas, antiHero, n95, ilikeyou, blackSummer, missYou));
 		
 		//best pop
 		Song unroly = new Song(null, "Unholy", "Sam Smith, Kim Petras", "2:36", "Pop", false, true, "https://open.spotify.com/track/3nqQXoyQOWXiESFLlDF1hG?si=023b3f1087dc441c", "https://github.com/uFelps/assets/blob/main/Spotify-Awards/best-pop/unholy.jpg.png?raw=true", 0.0, 0);

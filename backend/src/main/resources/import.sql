@@ -22,7 +22,7 @@ INSERT INTO tb_artist (average, count_votes, image, listeners, name) VALUES(0, 0
 
 
 INSERT INTO tb_song(title, artist, duration, category, indicated_best_song, indicated_best_category, url, img, average, count_votes)
-VALUES('As is Was', 'Harry Styles', '2:37', 'Pop', true, false, 'https://open.spotify.com/track/4LRPiXqCikLlN15c3yImP7?si=8405e2769bfa4d9a', 'https://github.com/uFelps/assets/blob/main/Spotify-Awards/songs-of-the-year/As-It-Was.png?raw=true', 0.0, 0);
+VALUES('As it Was', 'Harry Styles', '2:37', 'Pop', true, false, 'https://open.spotify.com/track/4LRPiXqCikLlN15c3yImP7?si=8405e2769bfa4d9a', 'https://github.com/uFelps/assets/blob/main/Spotify-Awards/songs-of-the-year/As-It-Was.png?raw=true', 0.0, 0);
 
 INSERT INTO tb_song(title, artist, duration, category, indicated_best_song, indicated_best_category, url, img, average, count_votes)
 VALUES('Anti-Hero', 'Taylor Swift', '3:20', 'Pop', true, false, 'https://open.spotify.com/track/0V3wPSX9ygBnCm8psDIegu?si=a215a95cb3404e20', 'https://github.com/uFelps/assets/blob/main/Spotify-Awards/songs-of-the-year/anti-hero.png?raw=true', 0.0, 0);
