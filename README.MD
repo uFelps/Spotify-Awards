@@ -15,6 +15,7 @@ This is a project where people can rate their favorite 2022 artists, songs and a
   </a>
 </p>
 
+https://github.com/uFelps/Spotify-Awards/assets/84783895/003aeabe-53df-4562-a588-7322034e4235
 
 &nbsp;
 ## Technologies
